@@ -1,8 +1,11 @@
 pipeline
 {
   agent any
+	environment
+	{
+		pomfilepath="/var/lib/jenkins/workspace/JenkinsPerso/employee-management-webapp-main"
+	}
 	
-	def pomfilepath="/var/lib/jenkins/workspace/JenkinsPerso/employee-management-webapp-main"
   
   stages
   {
