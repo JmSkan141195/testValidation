@@ -1,6 +1,8 @@
 pipeline
 {
   agent any
+	
+	def pomfilepath=/var/lib/jenkins/workspace/JenkinsPerso/employee-management-webapp-main
   
   stages
   {
@@ -18,7 +20,7 @@ pipeline
 		    {
 			    echo 'Git project recovered with success !'
 			    echo 'Cleaning'
-			    sh "mvn clean"
+			    sh "mvn clean -f"
 		    }
 		    post
 			{
@@ -33,7 +35,7 @@ pipeline
 		    steps
 		    {
 			    echo 'Compiling'
-			    sh "mvn compile"
+			    sh "mvn compile -f"
 		    }
 		    post
 			{
@@ -50,7 +52,7 @@ pipeline
 			steps
 			{
 			    echo 'Build Start ...'
-			    sh "mvn package -Dmaven.main.skip -DskipTests"
+			    sh "mvn package -f -Dmaven.main.skip -DskipTests"
 			}
 
 			post
