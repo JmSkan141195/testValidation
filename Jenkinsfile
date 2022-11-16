@@ -1,6 +1,13 @@
 pipeline
 {
   agent any
+	
+	tools
+	{
+		maven 'M2_HOME'
+		jdk 'JAVA_HOME'
+	}
+	
 	environment
 	{
 		pomfilepath="/var/lib/jenkins/workspace/JenkinsPerso/employee-management-webapp-main"
