@@ -9,8 +9,7 @@ pipeline
       steps
       {
         echo 'Pulling'
-        git branch : 'main'
-        url : 'https://github.com/JmSkan141195/testValidation.git'
+        git branch: 'main', credentialsId: 'git', url: 'https://github.com/JmSkan141195/testValidation'
       }
     }
   }
