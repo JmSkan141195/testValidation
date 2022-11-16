@@ -23,7 +23,7 @@ pipeline
 		    {
 			    echo 'Git project recovered with success !'
 			    echo 'Cleaning'
-			    sh "mvn clean -f"
+			    sh "mvn clean --f"
 		    }
 		    post
 			{
@@ -38,7 +38,7 @@ pipeline
 		    steps
 		    {
 			    echo 'Compiling'
-			    sh "mvn compile -f"
+			    sh "mvn compile --f"
 		    }
 		    post
 			{
@@ -55,7 +55,7 @@ pipeline
 			steps
 			{
 			    echo 'Build Start ...'
-			    sh "mvn package -f -Dmaven.main.skip -DskipTests"
+			    sh "mvn package --f -Dmaven.main.skip -DskipTests"
 			}
 
 			post
