@@ -45,7 +45,7 @@ pipeline
 		    steps
 		    {
 			    echo 'Compiling'
-			    sh "mvn compile --f"
+			    sh "mvn compile --f $pomfilepath"
 		    }
 		    post
 			{
@@ -62,7 +62,7 @@ pipeline
 			steps
 			{
 			    echo 'Build Start ...'
-			    sh "mvn package --f -Dmaven.main.skip -DskipTests"
+			    sh "mvn package --f $pomfilepath -Dmaven.main.skip -DskipTests"
 			}
 
 			post
