@@ -23,7 +23,7 @@ pipeline
 		    {
 			    echo 'Git project recovered with success !'
 			    echo 'Cleaning'
-			    sh "mvn clean --f"
+			    sh "mvn clean --f $pomfilepath"
 		    }
 		    post
 			{
