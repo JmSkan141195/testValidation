@@ -10,7 +10,7 @@ pipeline
 	
 	environment
 	{
-		pomfilepath="/var/lib/jenkins/workspace/JenkinsPerso/employee-management-webapp-main"
+		pomfilepath="/var/lib/jenkins/workspace/JenkinsPerso/employee-management-webapp-main/"
 	}
 	
   
